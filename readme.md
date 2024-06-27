@@ -6,6 +6,7 @@ My projet is a classification model that can classify different actions.
 
 ## ResNet-18
  I downloaded the Jetson Inference Library, and used ResNet-18. ResNet-18 is a convolutional neural network (CNN) architecture that belongs to the family of Residual Networks (ResNets) that is 18 layers and designed for image classification tasks.
+ 
  ![image](https://github.com/Evalulu123/Action-Detector/assets/173275376/722706cb-8665-4f15-a305-f2b2906a40dd)
  
 ## The Algorithm
@@ -34,6 +35,7 @@ Steps:
 7. Run the training script to re-train the network where the model-dir argument is where the model should be saved and where the data is. Run: 'python3 train.py --model-dir=models/v-actions data/v-actions', you can also add '--batch-size=NumberOfBatchFiles --workers=NumberOfWorkers --epochs=NumberOfEpochs' to alter the epochs and batch size.
 8. Next, we will export the network. Make sure you are in the docker container and in 'jetson-inference/python/training/classification' and run the onnx export script: 'python3 onnx_export.py --model-dir=models/v-actions'
     8a) Now look in the 'jetson-inference/python/training/classification/models/v-actions' folder to see if there is a new model called 'resnet18.onnx' there. That is your re-trained model!
+   
     ![image](https://github.com/Evalulu123/Action-Detector/assets/173275376/ffad5760-0c9c-4f27-aabf-b760f723e2da)
 10. To process the image, exit the docker container by pressing 'Ctl + D' and navigate to the 'jetson-inference/python/training/classification' directory.
     9a) Use ls models/v-actions/ to make sure that the model is on the nano. You should see a file called 'resnet18.onnx'.
