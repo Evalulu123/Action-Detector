@@ -27,7 +27,7 @@ My projet is a classification model that can classify different actions.
 
 Steps:
 1. Make sure you have a Jetson Nano (from NVIDIA) and log into pyhton with your Jetson Interface Nano
-     - 1a) You have to use an app called PuTTY to connect to your Jetson Nano, once your nano is connected to your device you can connect it to the wifi through your devices hotspot. You can check the connection by tyoing `nmcli device`.
+     - 1a) You have to use an app called PuTTY to connect to your Jetson Nano, once your nano is connected to your device you can connect it to the wifi through your devices hotspot. You can check the connection by run `nmcli device`.
      - 1b) When it is connected you can use the command `config wlan0` to check you IP address
 2. Next you can connect to Visual Studio Code using your IP address. To begin, open a new terminal in Visual Studio, this is where we will code.
 3. When everything is set up, make sure you have installed Jetson Inference and Docker Image from : http://github.com/dusty-nv/jetson-interface/blob/master/docs/building-repo-2.
@@ -47,5 +47,8 @@ Steps:
 10. Now we can test our AI! Run this command to see how it operates on an image from the fixinghair folder: `imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt $DATASET/test/fixinghair/fix_hair_2.jpg fixinghair.jpg`
 
 ## Video 
-Here is a video explanation:
+Here is a video explanation and demonstration:
+https://youtu.be/ib7blB3AXf8 
+
+## Train.py File
 
